@@ -26,10 +26,8 @@ jobs:
         with:
           hexlet-id: ${{ secrets.HEXLET_ID }}
 
-  check:
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: Linting
+      - name: npm install
         run: make install
+
+      - name: linting step
         run: make lint
