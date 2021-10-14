@@ -25,7 +25,7 @@ const gameCycle = (name) => {
 
 const gameStart = () => {
   const name = readlineSync.question('Welcome to the Brain Games!\nMay I have your name? ');
-  console.log(`Hello, ${name}!`)
+  console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   console.log(gameCycle(name));
 };
