@@ -1,4 +1,6 @@
-import * as game from '../src/index.js';
+import start, * as game from '../src/index.js';
+
+const rulesMessage = 'Find the greatest common divisor of given numbers.';
 
 const getQuestion = () => [game.getRandomInt(1, 100), game.getRandomInt(1, 100)];
 
@@ -21,10 +23,8 @@ const getCorrectAnswer = (question) => {
   return correctAnswer;
 };
 
-const gcdStart = () => {
-  const name = game.getName();
-  console.log('Find the greatest common divisor of given numbers.');
-  console.log(game.gameCycle(name, getCorrectAnswer, getQuestion));
+const gcd = () => {
+  console.log(start(rulesMessage, getQuestion, getCorrectAnswer));
 };
 
-export default gcdStart;
+export default gcd;

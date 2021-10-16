@@ -1,4 +1,8 @@
-import * as game from '../src/index.js';
+import start, * as game from '../src/index.js';
+
+const rulesMessage = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const getQuestion = () => [game.getRandomInt(1, 50)];
 
 const getCorrectAnswer = (question) => {
   if (question[0] % 2 === 0) {
@@ -7,12 +11,8 @@ const getCorrectAnswer = (question) => {
   return 'no';
 };
 
-const getQuestion = () => [game.getRandomInt(1, 50)];
-
-const evenStart = () => {
-  const name = game.getName();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  console.log(game.gameCycle(name, getCorrectAnswer, getQuestion));
+const even = () => {
+  console.log(start(rulesMessage, getQuestion, getCorrectAnswer));
 };
 
-export default evenStart;
+export default even;

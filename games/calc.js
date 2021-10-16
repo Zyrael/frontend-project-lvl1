@@ -1,4 +1,6 @@
-import * as game from '../src/index.js';
+import start, * as game from '../src/index.js';
+
+const rulesMessage = 'What is the result of the expression?';
 
 const getCorrectAnswer = (question) => {
   const [firstNum, operator, secondNum] = question;
@@ -20,10 +22,8 @@ const getQuestion = () => {
   return [first, oper, second];
 };
 
-const calcStart = () => {
-  const name = game.getName();
-  console.log('What is the result of the expression?');
-  console.log(game.gameCycle(name, getCorrectAnswer, getQuestion));
+const calc = () => {
+  console.log(start(rulesMessage, getQuestion, getCorrectAnswer));
 };
 
-export default calcStart;
+export default calc;
