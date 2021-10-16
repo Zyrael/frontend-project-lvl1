@@ -11,7 +11,7 @@ export const gameCycle = (name, getCorrectAnswer, getQuestion) => {
   for (let i = 0; i < 3; i += 1) {
     const question = getQuestion();
     const correctAnswer = getCorrectAnswer(question);
-    console.log(`Question: ${question} `);
+    console.log(`Question: ${question.join(' ')} `);
     const answer = readlineSync.question('Your answer: ');
     if (String(answer) !== String(correctAnswer)) {
       return `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`;

@@ -1,13 +1,13 @@
 import * as game from '../src/index.js';
 
-const getCorrectAnswer = (number) => {
-  if (number % 2 === 0) {
+const getCorrectAnswer = (question) => {
+  if (question[0] % 2 === 0) {
     return 'yes';
   }
   return 'no';
 };
 
-const getQuestion = () => game.getRandomInt(1, 50);
+const getQuestion = () => [game.getRandomInt(1, 50)];
 
 const evenStart = () => {
   const name = game.getName();

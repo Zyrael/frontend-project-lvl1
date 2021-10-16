@@ -1,10 +1,8 @@
 import * as game from '../src/index.js';
 
-const operatorsList = ['+', '-', '*'];
-
 const getCorrectAnswer = (question) => {
-  const [firstNum, operator, secondNum] = question.split(' ');
-  const [op1, op2] = [Number(firstNum), Number(secondNum)];
+  const [firstNum, operator, secondNum] = question;
+  const [op1, op2] = [firstNum, secondNum];
   switch (operator) {
     case '+':
       return op1 + op1;
@@ -16,10 +14,10 @@ const getCorrectAnswer = (question) => {
 };
 
 const getQuestion = () => {
-  const operator = game.getRandomElement(operatorsList);
-  const firstNum = game.getRandomInt(1, 20);
-  const secondNum = game.getRandomInt(1, 20);
-  return `${firstNum} ${operator} ${secondNum}`;
+  const first = game.getRandomInt(1, 20);
+  const second = game.getRandomInt(1, 20);
+  const oper = game.getRandomElement(['+', '-', '*']);
+  return [first, oper, second];
 };
 
 const calcStart = () => {
