@@ -19,11 +19,13 @@ const getQuestion = () => {
   const first = game.getRandomInt(1, 20);
   const second = game.getRandomInt(1, 20);
   const oper = game.getRandomElement(['+', '-', '*']);
-  return [first, oper, second];
+  const question = [first, oper, second];
+  const correctAnswer = getCorrectAnswer(question);
+  return [question, correctAnswer];
 };
 
 const calc = () => {
-  console.log(start(rulesMessage, getQuestion, getCorrectAnswer));
+  console.log(start(rulesMessage, getQuestion));
 };
 
 export default calc;

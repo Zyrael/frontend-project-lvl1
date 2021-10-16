@@ -7,12 +7,11 @@ const getName = () => {
   return name;
 };
 
-const start = (rulesMessage, getQuestion, getCorrectAnswer) => {
+const start = (rulesMessage, getQuestion) => {
   const name = getName();
   console.log(rulesMessage);
   for (let i = 0; i < 3; i += 1) {
-    const question = getQuestion();
-    const correctAnswer = getCorrectAnswer(question);
+    const [question, correctAnswer] = getQuestion();
     console.log(`Question: ${question.join(' ')} `);
     const answer = readlineSync.question('Your answer: ');
     if (String(answer) !== String(correctAnswer)) {

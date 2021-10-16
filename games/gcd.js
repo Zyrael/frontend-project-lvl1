@@ -2,8 +2,6 @@ import start, * as game from '../src/index.js';
 
 const rulesMessage = 'Find the greatest common divisor of given numbers.';
 
-const getQuestion = () => [game.getRandomInt(1, 100), game.getRandomInt(1, 100)];
-
 const findGcd = (a, b) => {
   if (!b) {
     return a;
@@ -17,8 +15,14 @@ const getCorrectAnswer = (question) => {
   return findGcd(a, b);
 };
 
+const getQuestion = () => {
+  const question = [game.getRandomInt(1, 100), game.getRandomInt(1, 100)];
+  const correctAnswer = getCorrectAnswer(question);
+  return [question, correctAnswer];
+};
+
 const gcd = () => {
-  console.log(start(rulesMessage, getQuestion, getCorrectAnswer));
+  console.log(start(rulesMessage, getQuestion));
 };
 
 export default gcd;
