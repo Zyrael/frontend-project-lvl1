@@ -4,22 +4,21 @@ const rulesMessage = 'What is the result of the expression?';
 
 const getCorrectAnswer = (question) => {
   const [firstNum, operator, secondNum] = question;
-  const [op1, op2] = [firstNum, secondNum];
   switch (operator) {
     case '+':
-      return op1 + op1;
+      return firstNum + secondNum;
     case '-':
-      return op1 - op2;
+      return firstNum - secondNum;
     default:
-      return op1 * op2;
+      return firstNum * secondNum;
   }
 };
 
 const getQuestion = () => {
-  const first = game.getRandomInt(1, 20);
-  const second = game.getRandomInt(1, 20);
-  const oper = game.getRandomElement(['+', '-', '*']);
-  const question = [first, oper, second];
+  const firstNum = game.getRandomInt(1, 20);
+  const secondNum = game.getRandomInt(1, 20);
+  const operator = game.getRandomElement(['+', '-', '*']);
+  const question = [firstNum, operator, secondNum];
   const correctAnswer = getCorrectAnswer(question);
   return [question, correctAnswer];
 };
