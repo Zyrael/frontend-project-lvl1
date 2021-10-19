@@ -7,11 +7,11 @@ const getCorrectAnswer = (question) => {
 
   switch (operator) {
     case '+':
-      return firstNum + secondNum;
+      return Number(firstNum) + Number(secondNum);
     case '-':
-      return firstNum - secondNum;
+      return Number(firstNum) - Number(secondNum);
     case '*':
-      return firstNum * secondNum;
+      return Number(firstNum) * Number(secondNum);
     default:
       return null;
   }
