@@ -9,14 +9,15 @@
 ```console
 brain-even
 ```
-[![asciicast](https://asciinema.org/a/ICnIMvqUeoZ9QkjbXp18FgGWI.svg)](https://asciinema.org/a/ICnIMvqUeoZ9QkjbXp18FgGWI)
+[![asciicast](https://asciinema.org/a/0mPqY2yiHk2QZrCLlltQ0lHHb.svg)](https://asciinema.org/a/0mPqY2yiHk2QZrCLlltQ0lHHb)
 
 # Brain Calc Game
+
 ### Command: 
 ```console
 brain-calc
 ```
-[![asciicast](https://asciinema.org/a/jUwnLDx4IHmH6D70pdG72AJvX.svg)](https://asciinema.org/a/jUwnLDx4IHmH6D70pdG72AJvX)
+[![asciicast](https://asciinema.org/a/oIIzY419ndglrlIiN5pw5bCxO.svg)](https://asciinema.org/a/oIIzY419ndglrlIiN5pw5bCxO)
 
 # Brain Gcd Game
 
@@ -24,7 +25,7 @@ brain-calc
 ```console
 brain-gcd
 ```
-[![asciicast](https://asciinema.org/a/4dWOpPuiguIz4thBWetAuFINe.svg)](https://asciinema.org/a/4dWOpPuiguIz4thBWetAuFINe)
+[![asciicast](https://asciinema.org/a/l1M9lPMwmHthcqsAfoq0mGLeT.svg)](https://asciinema.org/a/l1M9lPMwmHthcqsAfoq0mGLeT)
 
 # Brain Progression Game
 
@@ -32,7 +33,7 @@ brain-gcd
 ```console
 brain-progression
 ```
-[![asciicast](https://asciinema.org/a/6MvDY1vWEiVEQTYJ68olD09B4.svg)](https://asciinema.org/a/6MvDY1vWEiVEQTYJ68olD09B4)
+[![asciicast](https://asciinema.org/a/ibibYXNEoOi6f6rnerxAOeG4I.svg)](https://asciinema.org/a/ibibYXNEoOi6f6rnerxAOeG4I)
 
 # Brain Prime Game
 
@@ -40,4 +41,4 @@ brain-progression
 ```console
 brain-prime
 ```
-[![asciicast](https://asciinema.org/a/xieT9R7mrKn94ckrd4DV0tPWX.svg)](https://asciinema.org/a/xieT9R7mrKn94ckrd4DV0tPWX)
+[![asciicast](https://asciinema.org/a/DN2mlUITgtL6WFAZDPjvsh7Ei.svg)](https://asciinema.org/a/DN2mlUITgtL6WFAZDPjvsh7Ei)
