@@ -1,4 +1,4 @@
-import start, * as game from '../index.js';
+import { start, getRandomInt } from '../index.js';
 
 const rulesMessage = 'Find the greatest common divisor of given numbers.';
 
@@ -11,16 +11,16 @@ const findGcd = (a, b) => {
 };
 
 const getCorrectAnswer = (question) => {
-  const [a, b] = question.split(' ');
+  const [a, b] = question;
 
   return findGcd(a, b);
 };
 
 const getQuestion = () => {
-  const question = `${game.getRandomInt(1, 100)} ${game.getRandomInt(1, 100)}`;
+  const question = [getRandomInt(1, 100), getRandomInt(1, 100)];
   const correctAnswer = `${getCorrectAnswer(question)}`;
 
-  return [question, correctAnswer];
+  return [question.join(' '), correctAnswer];
 };
 
 const gcd = () => {

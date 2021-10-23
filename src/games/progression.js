@@ -1,21 +1,25 @@
-import start, * as game from '../index.js';
+import { start, getRandomInt } from '../index.js';
 
 const rulesMessage = 'What number is missing in the progression?';
 
 const getQuestion = () => {
-  let elem = game.getRandomInt(0, 20);
-  const question = [elem];
-  const step = game.getRandomInt(2, 5);
+  const question = [];
+  const len = getRandomInt(5, 10);
+  const first = getRandomInt(0, 20);
+  const step = getRandomInt(2, 5);
+  const indexOfHidden = getRandomInt(5, len);
+  let correctAnswer = 0;
 
-  for (let i = 0; i < game.getRandomInt(5, 10); i += 1) {
-    elem += step;
-    question.push(elem);
+  for (let i = 0; i < len; i += 1) {
+    if (i === indexOfHidden) {
+      question.push('..');
+      correctAnswer = `${first + i * step}`;
+    } else {
+      question.push(first + i * step);
+    }
   }
 
-  const correctAnswer = game.getRandomElement(question);
-  question[question.indexOf(correctAnswer)] = '..';
-
-  return [question.join(' '), `${correctAnswer}`];
+  return [question.join(' '), correctAnswer];
 };
 
 const progression = () => {

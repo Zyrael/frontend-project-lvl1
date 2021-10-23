@@ -1,30 +1,30 @@
-import start, * as game from '../index.js';
+import { start, getRandomInt, getRandomElement } from '../index.js';
 
 const rulesMessage = 'What is the result of the expression?';
 
 const getCorrectAnswer = (question) => {
-  const [firstNum, operator, secondNum] = question.split(' ');
+  const [firstNum, operator, secondNum] = question;
 
   switch (operator) {
     case '+':
-      return Number(firstNum) + Number(secondNum);
+      return firstNum + secondNum;
     case '-':
-      return Number(firstNum) - Number(secondNum);
+      return firstNum - secondNum;
     case '*':
-      return Number(firstNum) * Number(secondNum);
+      return firstNum * secondNum;
     default:
       return null;
   }
 };
 
 const getQuestion = () => {
-  const firstNum = game.getRandomInt(1, 20);
-  const secondNum = game.getRandomInt(1, 20);
-  const operator = game.getRandomElement(['+', '-', '*']);
-  const question = `${firstNum} ${operator} ${secondNum}`;
+  const firstNum = getRandomInt(1, 20);
+  const secondNum = getRandomInt(1, 20);
+  const operator = getRandomElement(['+', '-', '*']);
+  const question = [firstNum, operator, secondNum];
   const correctAnswer = `${getCorrectAnswer(question)}`;
 
-  return [question, correctAnswer];
+  return [question.join(' '), correctAnswer];
 };
 
 const calc = () => {
