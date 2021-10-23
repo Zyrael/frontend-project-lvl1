@@ -7,7 +7,7 @@ const getQuestion = () => {
   const len = getRandomInt(5, 10);
   const first = getRandomInt(0, 20);
   const step = getRandomInt(2, 5);
-  const indexOfHidden = getRandomInt(5, len);
+  const indexOfHidden = getRandomInt(0, len - 1);
   let correctAnswer = 0;
 
   for (let i = 0; i < len; i += 1) {
