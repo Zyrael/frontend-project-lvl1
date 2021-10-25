@@ -11,10 +11,12 @@ const getCorrectAnswer = (a, b) => {
 };
 
 const getQuestion = () => {
-  const question = [getRandomInt(1, 100), getRandomInt(1, 100)];
-  const correctAnswer = `${getCorrectAnswer(...question)}`;
+  const firstNum = getRandomInt(1, 100);
+  const secondNum = getRandomInt(1, 100);
+  const question = `${firstNum} ${secondNum}`;
+  const correctAnswer = `${getCorrectAnswer(firstNum, secondNum)}`;
 
-  return [question.join(' '), correctAnswer];
+  return [question, correctAnswer];
 };
 
 const gcd = () => {

@@ -8,15 +8,10 @@ const getQuestion = () => {
   const first = getRandomInt(0, 20);
   const step = getRandomInt(2, 5);
   const indexOfHidden = getRandomInt(0, len - 1);
-  let correctAnswer = 0;
+  const correctAnswer = `${first + indexOfHidden * step}`;
 
   for (let i = 0; i < len; i += 1) {
-    if (i === indexOfHidden) {
-      question.push('..');
-      correctAnswer = `${first + i * step}`;
-    } else {
-      question.push(first + i * step);
-    }
+    question.push((i === indexOfHidden) ? '..' : (first + i * step));
   }
 
   return [question.join(' '), correctAnswer];

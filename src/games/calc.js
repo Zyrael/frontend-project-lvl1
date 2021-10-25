@@ -2,9 +2,7 @@ import { start, getRandomInt, getRandomElement } from '../index.js';
 
 const rulesMessage = 'What is the result of the expression?';
 
-const getCorrectAnswer = (question) => {
-  const [firstNum, operator, secondNum] = question;
-
+const getCorrectAnswer = (firstNum, operator, secondNum) => {
   switch (operator) {
     case '+':
       return firstNum + secondNum;
@@ -21,10 +19,10 @@ const getQuestion = () => {
   const firstNum = getRandomInt(1, 20);
   const secondNum = getRandomInt(1, 20);
   const operator = getRandomElement(['+', '-', '*']);
-  const question = [firstNum, operator, secondNum];
-  const correctAnswer = `${getCorrectAnswer(question)}`;
+  const question = `${firstNum} ${operator} ${secondNum}`;
+  const correctAnswer = `${getCorrectAnswer(firstNum, operator, secondNum)}`;
 
-  return [question.join(' '), correctAnswer];
+  return [question, correctAnswer];
 };
 
 const calc = () => {
