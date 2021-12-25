@@ -1,4 +1,6 @@
-import { start, getRandomInt, getRandomElement } from '../index.js';
+import start from '../index.js';
+import getRandomNumber from '../getRandomNumber.js';
+import getRandomElement from '../getRandomElement.js';
 
 const rulesMessage = 'What is the result of the expression?';
 
@@ -16,8 +18,8 @@ const getCorrectAnswer = (firstNum, operator, secondNum) => {
 };
 
 const getQuestion = () => {
-  const firstNum = getRandomInt(1, 20);
-  const secondNum = getRandomInt(1, 20);
+  const firstNum = getRandomNumber(1, 20);
+  const secondNum = getRandomNumber(1, 20);
   const operator = getRandomElement(['+', '-', '*']);
   const question = `${firstNum} ${operator} ${secondNum}`;
   const correctAnswer = `${getCorrectAnswer(firstNum, operator, secondNum)}`;
